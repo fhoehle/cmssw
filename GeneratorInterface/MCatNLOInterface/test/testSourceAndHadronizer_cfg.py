@@ -8,7 +8,8 @@ process.load('FWCore.MessageService.MessageLogger_cfi')
 process.source = cms.Source("MCatNLOSource",
                             fileNames = cms.untracked.vstring('file:Z.events'),
                             processCode = cms.int32(-11361),
-                            skipEvents=cms.untracked.uint32(0)
+                            skipEvents=cms.untracked.uint32(0),
+                            version = cms.untracked.int32(341) # 410 = mcatnlo 4.1.0; 341 (default) = mcatnlo 3.4.1
 
 )
 
