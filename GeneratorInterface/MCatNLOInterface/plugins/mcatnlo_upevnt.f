@@ -28,7 +28,7 @@ C----------------------------------------------------------------------
       INTEGER NUP,IDPRUP,IDUP,ISTUP,MOTHUP,ICOLUP
       DOUBLE PRECISION XWGTUP,SCALUP,AQEDUP,AQCDUP,PUP,VTIMUP,SPINUP,
      & XMP2,XMA2,XMB2,BETA,VA,VB,SIGMA,DELTA,S2,XKA,XKB,PTF,E,PL,
-     & XSCALE,XEPHO,VALUE1,VALUE2,VALUE3
+     & XSCALE,XEPHO,X1VALUE,X2VALUE,QSQUAREVALUE
       COMMON/HEPEUP/NUP,IDPRUP,XWGTUP,SCALUP,AQEDUP,AQCDUP,
      &              IDUP(MAXNUP),ISTUP(MAXNUP),MOTHUP(2,MAXNUP),
      &              ICOLUP(2,MAXNUP),PUP(5,MAXNUP),VTIMUP(MAXNUP),
@@ -117,7 +117,7 @@ C---Les Houches expects mean weight to be the cross section in pb
       NQQ=NQQ+1
 C--Reads in extra doubles for 4_1_0  
       IF(VFLAGL.EQ.410) THEN
-         READ(IUNIT,905) VALUE1,VALUE2,VALUE3
+         READ(IUNIT,905) X1VALUE,X2VALUE,QSQUAREVALUE
       ENDIF
 
 C---Input format is now (px,py,pz,m)
